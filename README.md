@@ -57,7 +57,7 @@ albinolobster@mournland:~/fetch-broker-conf$ ./build/main_linux-arm64 -a -e -rho
 go-exploit provides the ability to scan via a provided target csv, where the csv is: `host, port, anything if ssl is enabled` (although the SSL field is ignored if -a is used). It also provides the ability to scan through a proxy. The command works like so (note that `-a` is SSL autodetection):
 
 ```sh
-albinolobster@mournland:~/rocketmq-broker-conf$ ./build/main_linux-arm64 -a -e -rhosts-file /tmp/rocketmq.csv -log-json true 2>/dev/null | jq 'select(.msg == "Extracted the variable")'
+albinolobster@mournland:~/rocketmq-broker-conf$ ./build/main_linux-arm64 -a -e -rhosts-file /tmp/rocketmq.csv -proxy socks5://127.0.0.1:9050 -log-json true 2>/dev/null | jq 'select(.msg == "Extracted the variable")'
 {
   "time": "2023-08-31T13:45:35.781849255-04:00",
   "level": "SUCCESS",
