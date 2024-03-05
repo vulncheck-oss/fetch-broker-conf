@@ -4,6 +4,14 @@ Fetch Broker Configuration will try to download the RocketMQ broker configuratio
 
 ## Compiling
 
+You can use the makefile to build a docker container:
+
+```sh
+make docker
+```
+
+Or, if you have a Go build environment ready to go, just use make:
+
 ```sh
 albinolobster@mournland:~/fetch-broker-conf$ make
 gofmt -d -w main.go
